@@ -10,8 +10,8 @@ locale: "en-US"
 title: "Yinghua Zhou"
 title_separator: "-"
 name: &name "Yinghua Zhou"
-description: &description "personal description"
-url: https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description: &description "Bachelor's (Honours) CS student at the University of Sydney"
+url: https://zyinghua.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "zyinghua/zyinghua.github.io"
 teaser: # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -101,6 +101,7 @@ author:
     impactstory:
     lastfm:
     linkedin:
+    leetcode: https://leetcode.com/nbpppp/
     orcid:
     pinterest:
     soundcloud:

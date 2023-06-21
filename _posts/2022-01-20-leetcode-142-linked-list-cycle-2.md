@@ -1,7 +1,11 @@
 ---
 title: "Leetcode 142: Linked List Cycle II"
+header:
+    teaser:
 date: 2022-01-20
 permalink: /posts/2022/01/leetcode-142-linked-list-cycle-2
+categories:
+    -
 tags:
     - leetcode
     - algorithms

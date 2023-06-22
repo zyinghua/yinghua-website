@@ -9,7 +9,7 @@ categories:
 tags:
     - leetcode
     - algorithms
-    - solution with explanation
+    - solution
 ---
 
 This question is asking for the node where the cycle begins if there's any, without modifying the list. It may comes less intuitive at the first glance, therefore we need some kind of algorithms that can detect the cycle in a different way.

@@ -13,7 +13,7 @@ tags:
 ---
 
 ### General Idea
-~~Basically on top of binary search, we make use of the first item in the list, 
+Basically on top of binary search, we make use of the first item in the list, 
 which gives information about whether the smallest is on the left or right side of the current chosen [mid], 
 and handle each case by case. To clarify: If no rotate is made, the algorithm just works as usual.
 

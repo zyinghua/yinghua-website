@@ -6,7 +6,7 @@ excerpt: "This is a placeholder for my future first publication"
 date: 2022-06-20
 venue: "Future Journal"
 paperurl: "http://zyinghua.github.io/"
-citation: "N/A"
+citation:
 ---
 
-I haven't formally published any papers yet. This is a placeholder for my future first paper. :round_pushpin:
+I haven't formally published any papers yet. This is a placeholder for my future first paper. :D

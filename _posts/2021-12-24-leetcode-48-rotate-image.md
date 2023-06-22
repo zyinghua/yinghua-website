@@ -1,8 +1,9 @@
 ---
-title: "Solution to Leetcode 48: Rotate Image"
+title: "Leetcode 48: Rotate Image"
 header:
     teaser:
 date: 2021-12-24
+excerpt: "Solution to Leetcode problem 48: Rotate Image"
 permalink: /posts/2022/01/2021-12-24-leetcode-48-rotate-image
 categories:
     -

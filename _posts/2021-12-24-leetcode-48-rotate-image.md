@@ -15,11 +15,9 @@ tags:
 ```python
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
-        """
-        Do not return anything, modify matrix in-place instead.
-        """
+        """Do not return anything, modify matrix in-place instead."""
+        
         assert matrix is not None, "Matrix is None!"
-    
     
         for row in matrix:
             for i in range(len(row) // 2):

@@ -31,8 +31,7 @@ redirect_from:
     -   Natural Language Processing
 -   Algorithms and Data Structures
 -   Object Oriented Programming
--   Databases
--   Some discrete others (Software Development, Parallel Computing, etc.)
+-   Some discrete others (Software Development, Databases, Parallel Computing, etc.)
 -   Programming Languages
     -   Python
     -   Java

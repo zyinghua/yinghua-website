@@ -12,4 +12,4 @@ I'm a Bachelor of Computer Science graduate from Monash University. My current s
 
 I'm planning to undertake Bachelor of Science (Honours) in Computer Science at The University of Sydney for the whole next year.
 
-I believe "Technology is about turning something magical real"!
+I believe "Technology is about turning something magical into reality"!

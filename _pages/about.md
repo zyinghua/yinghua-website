@@ -9,9 +9,7 @@ redirect_from:
 ---
 
 I'm a Bachelor of Computer Science graduate from Monash University. 
-My current study interest lies in Deep Learning & Computer Vision, 
-or broadly Artificial Intelligence; I have acquired knowledge of fundamental 
-Machine Learning techniques, Natural Language Processing as well as several Deep Learning insights.
+My current study interest lies in Deep Learning & Computer Vision, or broadly Artificial Intelligence;
 
 I'm currently doing Bachelor of Science (Honours) in Computer Science at The University of Sydney with a 
 research focus on the Computer Vision field with Deep Learning.

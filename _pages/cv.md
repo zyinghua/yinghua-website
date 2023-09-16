@@ -32,11 +32,9 @@ redirect_from:
 -   Algorithms and Data Structures
 -   Object Oriented Programming
 -   Some discrete others (Software Development, Databases, Parallel Computing, etc.)
--   Programming Languages
+-   Major Programming Languages
     -   Python
     -   Java
-    -   C
-    -   SQL
 
 <!-- # Publications
 

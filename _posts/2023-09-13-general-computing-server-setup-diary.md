@@ -139,3 +139,11 @@ Some useful commands:
 
     Process ID can be found by calling `nvidia-smi`.
 
+10. To upload a file from local to the server:
+
+    > `scp -P <port> <local-file-path> <username>@<server-ip>:<server-file-path>`
+
+    e.g.:
+
+    > `scp -P 22 /Users/username/Desktop/test.txt username@server-ip:~/home/username/test.txt`
+

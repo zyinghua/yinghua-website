@@ -82,3 +82,10 @@ To merge branches:
 
 > Switch to the main branch ($ git checkout main), and then:
 > `$ git merge branchname`
+
+### Revert
+Sometimes you would want to revert to a previous commit. To do so, first check the commit history
+and obtain the commit ID (e.g., a6b1234), then:
+
+> `$ git revert --hard <commit_id>`
+> `$ git push --force`

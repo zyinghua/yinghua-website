@@ -87,5 +87,6 @@ To merge branches:
 Sometimes you would want to revert to a previous commit. To do so, first check the commit history
 and obtain the commit ID (e.g., a6b1234), then:
 
-> `$ git revert --hard <commit_id>`
+> `$ git reset --hard <commit_id>`
+> 
 > `$ git push --force`

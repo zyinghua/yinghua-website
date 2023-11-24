@@ -15,14 +15,6 @@ redirect_from:
 -   Master of Information Technology (Artificial Intelligence), The University of Melbourne, 2022 - 2023 (Discontinued)
 -   Bachelor of Computer Science, Monash University, 2020 - 2022
 
-<!-- # Work experience
-
--   Summer 2015: Research Assistant
-
-    -   Github University
-    -   Duties included: Tagging issues
-    -   Supervisor: Professor Git -->
-
 # Skills
 
 -   Artificial Intelligence
@@ -35,6 +27,14 @@ redirect_from:
 -   Major Programming Languages
     -   Python
     -   Java
+
+# Experience
+
+- 2023 June-July: Research Scholar - Bridge Cheating Detection based on Computer Vision at Monash University
+
+# Achievements
+- No.1 in several subjects at Monash University
+- Melbourne Graduate Scholarship
 
 <!-- # Publications
 

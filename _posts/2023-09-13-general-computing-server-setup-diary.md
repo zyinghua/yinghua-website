@@ -37,6 +37,9 @@ tags:
 
 3.  Close and reopen your terminal or use the command to reload the profile:
     ```bash
+    conda init bash
+    ```
+    ```bash
     source ~/.bashrc
     ```
 

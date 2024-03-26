@@ -55,7 +55,7 @@ tags:
     ```bash
    conda env create -f environment.yaml
    ```
-   that takes care of the installation of all necessary packages.
+   which takes care of the installation of all necessary packages.
 
 5. you can then activate the environment by running:
    ```bash

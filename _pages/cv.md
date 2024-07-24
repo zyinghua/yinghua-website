@@ -12,7 +12,6 @@ redirect_from:
 # Education
 
 -   Bachelor of Science (Honours) - Computer Science, The University of Sydney, 2023 - 2024
--   Master of Information Technology (Artificial Intelligence), The University of Melbourne, 2022 - 2023 (Discontinued)
 -   Bachelor of Computer Science, Monash University, 2020 - 2022
 
 # Skills
@@ -35,6 +34,7 @@ redirect_from:
 # Achievements
 - No.1 in several subjects at Monash University
 - Melbourne Graduate Scholarship
+- Honours Class I from The University of Sydney
 
 <!-- # Publications
 

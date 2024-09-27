@@ -10,7 +10,7 @@ locale: "en-US"
 title: "Yinghua Zhou"
 title_separator: "-"
 name: &name "Yinghua Zhou"
-description: &description "Bachelor of Science (Honours) - Computer Science student at the University of Sydney."
+description: &description "A human on earth."
 url: https://zyinghua.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "zyinghua/zyinghua.github.io"
@@ -85,7 +85,7 @@ author:
     employer:
     pubmed:
     googlescholar:
-    email: "yzho0423@uni.sydney.edu.au"
+    email: "[my first name lowercase].[last name lowercase without last letter] at google's mail dot com"
     researchgate:
     uri:
     bitbucket:

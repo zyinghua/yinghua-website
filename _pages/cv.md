@@ -29,12 +29,13 @@ redirect_from:
 
 # Experience
 
-- 2023 June-July: Research Scholar - Bridge Cheating Detection based on Computer Vision at Monash University
+- 2024 September - Present: LLM Engineer Intern at ByteDance
+- 2023 June-July: Research Assistant - Bridge Cheating Detection based on Deep Learning at Monash University
 
 # Achievements
 - No.1 in several subjects at Monash University
 - Melbourne Graduate Scholarship
-- Honours Class I from The University of Sydney
+- Honours Class I from University of Sydney
 
 <!-- # Publications
 

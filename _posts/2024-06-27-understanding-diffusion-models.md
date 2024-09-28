@@ -310,4 +310,6 @@ Another notable advancement in diffusion models is the advent of Latent Diffusio
 
 
 ---
-Thanks for reading! If you find any mistakes or have any questions, please feel free to contact me :D
+##### Thanks for reading! If you find any mistakes or have any questions, please feel free to contact me :D
+
+### Issues with the rendering of formulas?: you may download the markdown file from [here](https://github.com/zyinghua/zyinghua.github.io/blob/master/_posts/2024-06-27-understanding-diffusion-models.md) and view it locally, my apologies for this temporary inconvenience!

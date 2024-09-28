@@ -49,7 +49,7 @@ $$
 
 Recall that combining two Gaussian distributions with different variances, $\mathcal{N}(z; \mu, \sigma_1^2\mathbf{I})$ and $\mathcal{N}(z; \mu, \sigma_2^2\mathbf{I})$, results in $\mathcal{N}(z; \mu, (\sigma_1^2+\sigma_2^2)\mathbf{I})$. Thus, in the case of Equation 7, for transitioning from $t$ to $t-1$, the variance becomes $\sqrt{(1 - \alpha_t) + \alpha_t (1-\alpha_{t-1})} = \sqrt{1 - \alpha_t\alpha_{t-1}}$, with subsequent derivations following the same intuition.
 
-Our goal is to learn a network $p_\theta$ that can approximate the actual reverse process. We start by looking at the objective that we want to minimize: the negative log-likelihood, $- \log p_\theta(\mathbf{z}_0)$, which involves maximizing the likelihood of the real data. However, directly optimizing this objective is practically infeasible due to its dependence on the entire sequence of previous steps. As a solution ([Sohl-Dickstein et al. (2015)](https://arxiv.org/abs/1503.03585)), we can derive an variational lower bound (vlb) on the data log-likelihood to achieve the same optimization effect:
+The goal is to learn a network $p_\theta$ that can approximate the actual reverse process. We start by looking at the objective that we want to minimize: the negative log-likelihood, $- \log p_\theta(\mathbf{z}_0)$, which involves maximizing the likelihood of the real data. However, directly optimizing this objective is practically infeasible due to its dependence on the entire sequence of previous steps. As a solution ([Sohl-Dickstein et al. (2015)](https://arxiv.org/abs/1503.03585)), we can derive an variational lower bound (vlb) on the data log-likelihood to achieve the same optimization effect:
 
 $$
 \begin{align}
@@ -105,7 +105,7 @@ L_\text{vlb}
 \end{align}
 $$
 
-Recall that in Equation 2, the forward process requires a variance term $\beta_t$, which can either be learned through reparameterization ([Kingma and Welling (2013)](https://arxiv.org/abs/1312.6114)) or treated as hyperparameters fixed as time-dependent constants, both retaining the same functional form ([Sohl-Dickstein et al. (2015)](https://arxiv.org/abs/1503.03585)). The subsequent groundbreaking work by [Ho et al. (2020)](https://arxiv.org/abs/2006.11239) adopts the latter approach, which our work also follows. Specifically, $\beta_t$ is set according to a linearly increasing schedule within a specific range based on the timesteps, although subsequent work ([Nichol and Dhariwal (2021)](https://arxiv.org/abs/2102.09672)) has proposed other scheduling schemes.
+Recall that in Equation 2, the forward process requires a variance term $\beta_t$, which can either be learned through reparameterization ([Kingma and Welling (2013)](https://arxiv.org/abs/1312.6114)) or treated as hyperparameters fixed as time-dependent constants, both retaining the same functional form ([Sohl-Dickstein et al. (2015)](https://arxiv.org/abs/1503.03585)). The subsequent groundbreaking work by [Ho et al. (2020)](https://arxiv.org/abs/2006.11239) adopts the latter approach. Specifically, $\beta_t$ is set according to a linearly increasing schedule within a specific range based on the timesteps, although subsequent work ([Nichol and Dhariwal (2021)](https://arxiv.org/abs/2102.09672)) has proposed other scheduling schemes.
 
 Given that we have fixed the forward process variances $\beta_t$, in Equation 30, since $\mathbf{z}_T$ is Gaussian noise sampled from $\mathcal{N}(0, I)$ and $q$ has no learnable parameters, while $p(\mathbf{z}_T)$ converges to the normal distribution $\mathcal{N}(0, I)$ given a sufficiently large $T$. Therefore, the $L_T$ term is constant and typically small, allowing it to be ignored, and we only need to focus on minimizing the $L_{t-1}$ and $L_0$ terms.
 
@@ -186,7 +186,7 @@ L_{t-1}
 = \mathbb{E}_{\mathbf{z}_0, \epsilon} \Bigg[ \frac{1}{2\sigma_t^2} \left\Vert \tilde{\mu}_t (\mathbf{z}_t, \mathbf{z}_0) - \mu_\theta (\mathbf{z}_t, t) \right\Vert^2 \Bigg] \tag{46}
 $$
 
-Recall Equation (45), which we want our trained $\mu_{\theta}(\mathbf{z}_{t}, t)$ to match given $\mathbf{z}_t$. Since $\mathbf{z}_t$ is available as input during training, we can instead choose to fit our model on the noise, as derived below:
+Recall Equation (45), which we want the trained $\mu_{\theta}(\mathbf{z}_{t}, t)$ to match given $\mathbf{z}_t$. Since $\mathbf{z}_t$ is available as input during training, we can instead choose to fit the model on the noise, as derived below:
 
 $$
 \begin{align}
@@ -233,7 +233,7 @@ $$
 \end{aligned}
 $$
 
-Algorithm 1 and Algorithm 2 outline the training and sampling processes of DDPM ([Ho et al. (2020)](https://arxiv.org/abs/2006.11239)), respectively. However, this sampling scheme is significantly less efficient compared to other generative models such as Generative Adversarial Networks (GANs). Subsequent work by [Song et al. (2021)](https://arxiv.org/abs/2010.02502), termed as DDIM ([Song et al. (2021)](https://arxiv.org/abs/2010.02502)), which our work builds upon, addresses this inefficiency by generalizing the forward and reverse diffusion processes to non-Markovian ones. Specifically, with the exact same training objective as in DDPM, another sampling scheme is proposed to sample $\mathbf{z}_{s}$ given $\mathbf{z}_t$, where $s < t$:
+Algorithm 1 and Algorithm 2 outline the training and sampling processes of DDPM ([Ho et al. (2020)](https://arxiv.org/abs/2006.11239)), respectively. However, this sampling scheme is significantly less efficient compared to other generative models such as Generative Adversarial Networks (GANs). Subsequent work by [Song et al. (2021)](https://arxiv.org/abs/2010.02502), termed as DDIM ([Song et al. (2021)](https://arxiv.org/abs/2010.02502)) addresses this inefficiency by generalizing the forward and reverse diffusion processes to non-Markovian ones. Specifically, with the exact same training objective as in DDPM, another sampling scheme is proposed to sample $\mathbf{z}_{s}$ given $\mathbf{z}_t$, where $s < t$:
 
 $$
 \mathbf{z}_{s} = \sqrt{\bar{\alpha}_{s}} 
@@ -267,7 +267,7 @@ $$
 \nabla_{\mathbf{z}_t} \log p_\theta (\mathbf{z}_t) = - \frac{1}{\sqrt{1 - \bar{\alpha}_t}} \epsilon_\theta (\mathbf{z}_t) \tag{58}
 $$
 
-Where $\epsilon_\theta$ is our noise-predictor model. Then, by substituting into the score function, we have:
+Where $\epsilon_\theta$ is the noise-predictor model. Then, by substituting into the score function, we have:
 
 $$
 \begin{align}
@@ -286,11 +286,11 @@ $$
 
 Where $s$ denotes the constant guidance scale, which modulates the trade-off between sample fidelity and diversity. A larger scale enhances the fidelity and faithfulness to the class but reduces the diversity of the generated samples.
 
-On the other hand, classifier-free guidance ([Ho and Salimans (2022)](https://arxiv.org/abs/2207.12598)) adheres to a similar intuition but functions without an explicit classifier. During training, classifier-free guidance employs a scheme that randomly masks the conditioning information, thereby capturing both the conditional and unconditional distributions. This method enables extrapolation with a specified guidance scale during sampling to achieve comparable trade-offs. As our application does not involve classifier-free guidance, we omit its details here and refer readers to the original paper ([Ho and Salimans (2022)](https://arxiv.org/abs/2207.12598)) for a comprehensive discussion.
+On the other hand, classifier-free guidance ([Ho and Salimans (2022)](https://arxiv.org/abs/2207.12598)) adheres to a similar intuition but functions without an explicit classifier. During training, classifier-free guidance employs a scheme that randomly masks the conditioning information, thereby capturing both the conditional and unconditional distributions. This method enables extrapolation with a specified guidance scale during sampling to achieve comparable trade-offs. For more details, we refer readers to the original paper ([Ho and Salimans (2022)](https://arxiv.org/abs/2207.12598)) for a comprehensive discussion.
 
 ## Latent Diffusion Models
 
-Another notable advancement in diffusion models is the advent of Latent Diffusion Models ([Rombach et al. (2022)](https://arxiv.org/abs/2112.10752)), which form the foundation of our work. The core concept involves performing the diffusion process on smaller spatial latent representations of the original images, defined by pre-trained Variational Autoencoders (VAE). This approach significantly reduces the computational overhead associated with training on high-resolution pixel-level space, while the latent representations produced by VAE are potentially more semantically meaningful. Specifically, using a learned VAE encoder $\mathcal{E}$ and image data $\mathbf{x}$, we train and sample diffusion models on $\mathbf{z} = \mathcal{E}(\mathbf{x})$ while keeping $\mathcal{E}$ fixed. Finally, we apply a VAE decoder $\mathcal{D}$ on $\mathbf{z}$ to obtain the generated samples $\hat{\mathbf{x}} = \mathcal{D}(\mathbf{z})$.
+Another notable advancement in diffusion models is the advent of Latent Diffusion Models ([Rombach et al. (2022)](https://arxiv.org/abs/2112.10752)). The core concept involves performing the diffusion process on smaller spatial latent representations of the original images, defined by pre-trained Variational Autoencoders (VAE). This approach significantly reduces the computational overhead associated with training on high-resolution pixel-level space, while the latent representations produced by VAE are potentially more semantically meaningful. Specifically, using a learned VAE encoder $\mathcal{E}$ and image data $\mathbf{x}$, we train and sample diffusion models on $\mathbf{z} = \mathcal{E}(\mathbf{x})$ while keeping $\mathcal{E}$ fixed. Finally, we apply a VAE decoder $\mathcal{D}$ on $\mathbf{z}$ to obtain the generated samples $\hat{\mathbf{x}} = \mathcal{D}(\mathbf{z})$.
 
 
 ## References

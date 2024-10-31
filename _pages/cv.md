@@ -20,6 +20,7 @@ redirect_from:
     -   Machine Learning
     -   Deep Learning
     -   Natural Language Processing
+    -   Diffusion Models
 -   Algorithms and Data Structures
 -   Object Oriented Programming
 -   Some discrete others (Software Development, Databases, Parallel Computing, etc.)
@@ -33,9 +34,9 @@ redirect_from:
 - 2023 June - July: Research Assistant - Bridge Cheating Detection based on Deep Learning, Monash University
 
 # Achievements
-- No.1 in several subjects at Monash University
+- Highest grade in several subjects at Monash University
 - Melbourne Graduate Scholarship
-- Honours Class I from University of Sydney
+- First Class Honours from University of Sydney
 
 <!-- # Publications
 

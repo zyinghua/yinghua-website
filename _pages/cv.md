@@ -30,7 +30,7 @@ redirect_from:
 
 # Experience
 
-- 2024 September - Present: LLM Engineer Intern, ByteDance
+- 2024 Present: LLM Engineer Intern, ByteDance
 - 2023 June - July: Research Assistant - Bridge Cheating Detection based on Deep Learning, Monash University
 
 # Achievements

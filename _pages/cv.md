@@ -30,11 +30,11 @@ redirect_from:
 
 # Experience
 
-- 2024 Present: LLM Engineer Intern, ByteDance
+- 2024 September - December: LLM Engineer Intern, ByteDance
 - 2023 June - July: Research Assistant - Bridge Cheating Detection based on Deep Learning, Monash University
 
 # Achievements
-- Highest grade in several subjects at Monash University
+- Highest grade in several subjects at Monash University & The University of Sydney
 - Melbourne Graduate Scholarship
 - First Class Honours from University of Sydney
 
